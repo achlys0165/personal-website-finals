@@ -1,11 +1,32 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div id="app-wrapper">
+    <NavBar />
+    <main>
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <GuestlistSection />
+      <ContactSection />
+    </main>
+    <FooterBar />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import NavBar from './components/NavBar.vue'
+import HeroSection from './components/HeroSection.vue'
+import AboutSection from './components/AboutSection.vue'
+import SkillsSection from './components/SkillsSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import GuestlistSection from './components/GuestlistSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import FooterBar from './components/FooterBar.vue'
+</script>
+
+<style>
+#app-wrapper {
+  min-height: 100vh;
+  animation: fadeInUp 0.6s ease;
+}
+</style>
