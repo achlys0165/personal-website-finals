@@ -1,25 +1,14 @@
 <template>
   <div class="photo-block">
-    <div 
-      class="photo-frame" 
-      @click="triggerUpload"
-      @dragover.prevent="isDragging = true"
-      @dragleave.prevent="isDragging = false"
-      @drop.prevent="handleDrop"
-      :style="isDragging ? {borderColor: 'var(--pink)'} : {}"
-    >
-      <div v-if="!photoUrl" class="photo-inner">
-        <svg class="photo-avatar" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="30" r="16" fill="none" stroke="rgba(244,167,185,.35)" stroke-width="1.5"/>
-          <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" fill="none" stroke="rgba(244,167,185,.35)" stroke-width="1.5"/>
-        </svg>
-        <p class="photo-hint">Click to upload photo<br><span>or drag &amp; drop</span></p>
-      </div>
-      <img v-else :src="photoUrl" alt="Profile" style="display:block;width:100%;height:100%;object-fit:cover;border-radius:4px;">
-      <input type="file" ref="input" accept="image/*" style="display:none" @change="handleFile">
+    <div class="photo-frame">
+      <img 
+        src="../assets/profile.jpg" 
+        alt="Jan Sultan" 
+        class="photo-img"
+      >
     </div>
     <div class="photo-meta">
-      <div class="photo-name">Your Name</div>
+      <div class="photo-name">Jan Sultan</div>
       <div class="photo-role">Student · Aspiring Pentester</div>
     </div>
   </div>
