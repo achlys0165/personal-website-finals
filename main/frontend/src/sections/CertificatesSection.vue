@@ -24,7 +24,7 @@ import CertificateCard from './CertificateCard.vue'
 import { vReveal } from '../directives/reveal'
 
 const certs = [
-  { badge: '🎓', issuer: 'Cisco', name: 'Introduction to Cybersecurity', earned: true },
+  { badge: '🎓', issuer: 'Cisco', name: 'Introduction to Cybersecurity', earned: false},
   { badge: '🛡️', issuer: 'TryHackMe', name: 'Pre-Security Learning Path', earned: true },
   { badge: '🌐', issuer: 'Cisco', name: 'Networking Basics', earned: true },
   { badge: '⚔️', issuer: 'CompTIA', name: 'Security+', earned: false },

@@ -12,7 +12,7 @@
         v-for="(p, i) in projects" 
         :key="p.name"
         :project="p"
-        :class="[p.size, 'rv', i > 0 ? `rv-d${i}` : '']"
+        :class="[p.size, 'rv', i > 0 ? `rv-d${i % 3}` : '']"
         v-reveal
       />
     </div>
@@ -20,25 +20,61 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 import { vReveal } from '../directives/reveal'
 
-const projects = [
-  { name: 'Network Port Scanner', icon: '🔍', desc: 'Lightweight Python tool for scanning open ports on a target host. Built from scratch to understand TCP handshakes, socket programming, and how recon tools actually work under the hood.', tags: ['Python', 'Sockets', 'Networking', 'CLI'], size: 'proj-wide' },
-  { name: 'Attendance Management System', icon: '🏫', desc: 'Full CRUD application for student records, grades, and scheduling. Database integration with a clean CLI interface.', tags: ['Python', 'SQLite'], size: 'proj-narrow' },
-  { name: 'Password Strength Analyzer', icon: '🔑', desc: 'Analyzes passwords against patterns, dictionary entries, and entropy. Built to understand what makes credentials weak.', tags: ['Python', 'Security'], size: 'proj-third' },
-  { name: 'OSINT Recon Helper', icon: '🕵️', desc: 'CLI tool for passive recon — pulls WHOIS, DNS records, and subdomain enumeration for a given target domain.', tags: ['Python', 'OSINT'], size: 'proj-third' },
-  { name: 'IoT Environment Monitor', icon: '🌡️', desc: 'Arduino sensor system logging temperature, humidity, and motion. Thinking about the security risks of connected devices.', tags: ['Arduino', 'C++'], size: 'proj-third' }
-]
+<<<<<<< HEAD
+const projects = ref([
+  {
+    name: 'CaFTAP [IoT Arduino Project]',
+    icon: '📡',
+    description: 'An IoT-based automation and monitoring system built using Arduino, designed to collect sensor data and execute real-time control logic. The project integrates hardware components with embedded programming to demonstrate practical applications of IoT in monitoring and automation environments.',
+    tags: ['Arduino', 'IoT', 'C++', 'Embedded Systems', 'Sensors'],
+    size: 'proj-wide',
+    wokwi: 'https://wokwi.com/projects/456768557157923841'
+  },
+  {
+    name: 'Music Ministry Management Web App',
+    icon: '🎵',
+    description: 'A web-based management system developed to streamline scheduling, coordination, and communication for a music ministry. The platform includes role-based access (admin and musician), structured scheduling modules, and centralized data management to improve organization and workflow efficiency.',
+    tags: ['Vue.js', 'Flask', 'PostgreSQL', 'Authentication', 'Full Stack'],
+    size: 'proj-wide',
+    github: 'https://github.com/achlys0165/Usher-s-Ministry-Attendance-Dashboard'
+  },
+  {
+    name: 'RFID Attendance Monitoring System',
+    icon: '🏷️',
+    description: 'A contactless attendance system utilizing RFID technology for automated identity verification and record logging. The system improves accuracy and reduces manual errors by integrating RFID hardware with a backend database for real-time attendance tracking and reporting.',
+    tags: ['RFID', 'Python', 'Database', 'Hardware Integration', 'Automation'],
+    size: 'proj-narrow',
+    github: 'https://github.com/achlys0165/Usher-s-Ministry-Attendance-Dashboard'
+  },
+  {
+    name: 'JournalApp (Mental Health Tracker)',
+    icon: '📓',
+    description: 'A desktop application built with Python that allows users to log journal entries and track emotional well-being over time. The system supports structured input, data storage, and basic analytical insights to encourage self-reflection and mental health awareness.',
+    tags: ['Python', 'Tkinter', 'SQLite', 'Data Analysis', 'Desktop App'],
+    size: 'proj-narrow',
+    github: 'https://github.com/achlys0165/JournalApp'
+  }
+])
+=======
 </script>
 
 <style scoped>
-.proj-grid{
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:1rem;
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
-@media(max-width:860px){
-  .proj-wide,.proj-narrow,.proj-third{grid-column:span 12 !important;}
+
+.proj-wide { grid-column: span 12; }
+.proj-narrow { grid-column: span 6; }
+
+@media (max-width: 860px) {
+  .proj-wide, .proj-narrow {
+    grid-column: span 12;
+  }
 }
 </style>
