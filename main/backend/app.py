@@ -1,22 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import requests
 import os
 
 app = Flask(__name__)
 
-# CORS - allow your Vercel domain and localhost
-CORS(app, resources={
-    r"/api/*": {
-        "origins": [
-            "https://jan-sultan.vercel.app/p",  # Your actual Vercel URL
-            "http://localhost:3000",
-            "http://localhost:5173"
-        ],
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    }
-})
+# Get from environment or use wildcard pattern
+cors_origins = os.environ.get("CORS_ORIGINS", "*")
+CORS(app, origins=cors_origins.split(","), allow_headers=["Content-Type", "Authorization"])
+
 # Supabase REST API config
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY")
