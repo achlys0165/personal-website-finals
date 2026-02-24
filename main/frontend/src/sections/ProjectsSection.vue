@@ -24,7 +24,6 @@ import { ref } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 import { vReveal } from '../directives/reveal'
 
-<<<<<<< HEAD
 const projects = ref([
   {
     name: 'CaFTAP [IoT Arduino Project]',
@@ -59,7 +58,7 @@ const projects = ref([
     github: 'https://github.com/achlys0165/JournalApp'
   }
 ])
-=======
+
 </script>
 
 <style scoped>
