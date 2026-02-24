@@ -31,7 +31,7 @@ const projects = ref([
     description: 'An IoT-based automation and monitoring system built using Arduino, designed to collect sensor data and execute real-time control logic. The project integrates hardware components with embedded programming to demonstrate practical applications of IoT in monitoring and automation environments.',
     tags: ['Arduino', 'IoT', 'C++', 'Embedded Systems', 'Sensors'],
     size: 'proj-wide',
-    wokwi: 'https://wokwi.com/projects/456768557157923841'
+    github: 'https://wokwi.com/projects/456768557157923841'
   },
   {
     name: 'Music Ministry Management Web App',

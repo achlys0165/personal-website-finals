@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-inner">
-      <p class="foot-l">© 2025 <span>yourname</span>. Built with curiosity &amp; stubbornness.</p>
+      <p class="foot-l">© 2026 <span>Jan Sultan</span>. Built with curiosity &amp; stubbornness.</p>
       <div class="foot-r"><span class="pulse"></span>Currently learning — always</div>
     </div>
   </footer>

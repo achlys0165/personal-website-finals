@@ -4,7 +4,7 @@
     <BackgroundEffects />
     
     <nav>
-      <a href="#hero" class="nav-logo" @click.prevent="scrollTo('hero')">yourname.dev</a>
+      <a href="#hero" class="nav-logo" @click.prevent="scrollTo('hero')">jansultan.dev</a>
       <ul class="nav-links">
         <li><a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollTo('about')">About</a></li>
         <li><a href="#skills" :class="{ active: activeSection === 'skills' }" @click.prevent="scrollTo('skills')">Skills</a></li>

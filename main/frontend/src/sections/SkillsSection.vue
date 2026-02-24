@@ -34,7 +34,7 @@ import SkillRow from './SkillRow.vue'
 import { vReveal } from '../directives/reveal'
 
 const skills = [
-  { icon: '🐍', name: 'Python', desc: 'Scripts, automation, security tools, data processing. Primary language.', level: 'Advanced', cls: 'lvl-adv' },
+  { icon: '🐍', name: 'Python', desc: 'Scripts, automation, security tools, data processing. Primary language.', level: 'Intermediate', cls: 'lvl-int' },
   { icon: '🐧', name: 'Linux', desc: 'Daily driver. Bash scripting, process management, permissions, file systems.', level: 'Advanced', cls: 'lvl-adv' },
   { icon: '🌐', name: 'Networking', desc: 'TCP/IP, DNS, HTTP(S), subnetting, Wireshark packet analysis.', level: 'Intermediate', cls: 'lvl-int' },
   { icon: '🚩', name: 'CTF / Hacking', desc: 'Web exploitation, reverse engineering, cryptography, OSINT. HackTheBox, TryHackMe.', level: 'Intermediate', cls: 'lvl-int' },

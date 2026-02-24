@@ -4,9 +4,9 @@
       <div class="hero-left">
         <p class="hero-kicker">Cybersecurity Portfolio · 2025</p>
         <h1 class="hero-h1">
-          Jan.<br>
-          <span class="pink">Sultan</span><br>
-          
+          Jan<br>
+          <span class="pink">Sultan.</span><br>
+
           <span class="ghost">Cybersecurity</span>
         </h1>
         <p class="hero-p">

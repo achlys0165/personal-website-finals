@@ -2,11 +2,10 @@
   <div class="sidebar-block">
     <div class="sb-label">Interests</div>
     <div class="interest-list">
-      <div class="int-item">Penetration Testing</div>
-      <div class="int-item">Python & Automation</div>
+      <div class="int-item">Web Exploitation</div>
+      <div class="int-item">AI & Automation</div>
       <div class="int-item">CTF Competitions</div>
       <div class="int-item">Linux & Open Source</div>
-      <div class="int-item">Philosophy & Ethics</div>
       <div class="int-item">Arduino & IoT</div>
       <div class="int-item">OSINT</div>
     </div>
