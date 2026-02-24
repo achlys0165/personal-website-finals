@@ -4,43 +4,21 @@ import os
 
 app = Flask(__name__)
 
-# CORS - Manual handling (most reliable method)
+# NUCLEAR CORS - Allow everything
 @app.after_request
 def after_request(response):
-    origin = request.headers.get('Origin')
-    
-    # Allow your Vercel domain and localhost
-    allowed = [
-        'https://jan-sultan.vercel.app',
-        'https://my-profile-tan-seven.vercel.app',
-        'http://localhost:3000',
-        'http://localhost:5173'
-    ]
-    
-    if origin in allowed:
-        response.headers.add('Access-Control-Allow-Origin', origin)
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-        response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-        response.headers.add('Access-Control-Allow-Credentials', 'true')
-    
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', '*')
+    response.headers.add('Access-Control-Allow-Methods', '*')
     return response
 
-# Handle OPTIONS preflight requests
 @app.route('/api/<path:path>', methods=['OPTIONS'])
-def handle_options(path):
+def options(path):
     response = jsonify({'status': 'ok'})
-    origin = request.headers.get('Origin')
-    allowed = [
-        'https://jan-sultan.vercel.app',
-        'https://my-profile-tan-seven.vercel.app',
-        'http://localhost:3000',
-        'http://localhost:5173'
-    ]
-    if origin in allowed:
-        response.headers.add('Access-Control-Allow-Origin', origin)
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-        response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-    return response
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', '*')
+    response.headers.add('Access-Control-Allow-Methods', '*')
+    return response, 200
 
 # Supabase config
 SUPABASE_URL = os.environ.get("SUPABASE_URL")

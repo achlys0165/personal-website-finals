@@ -1,37 +1,33 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 
 class ApiService {
   async fetchGuestbook() {
-    const res = await fetch(`${API_URL}/guestbook`)
-    const data = await res.json()
-    if (!res.ok || !data.success) throw new Error(data.error || 'Failed to fetch')
-    return data
+    const res = await fetch(`${API_URL}/api/guestbook`)
+    if (!res.ok) throw new Error('Failed to fetch guestbook')
+    return res.json()
   }
 
   async postGuestbook(entry) {
-    const res = await fetch(`${API_URL}/guestbook`, {
+    const res = await fetch(`${API_URL}/api/guestbook`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: entry.name,
         message: entry.message
-        // Note: removed 'from' field to match your schema
       })
     })
-    const data = await res.json()
-    if (!res.ok || !data.success) throw new Error(data.error || 'Failed to post')
-    return data
+    if (!res.ok) throw new Error('Failed to post entry')
+    return res.json()
   }
 
   async sendContact(contactData) {
-    const res = await fetch(`${API_URL}/contact`, {
+    const res = await fetch(`${API_URL}/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(contactData)
     })
-    const data = await res.json()
-    if (!res.ok || !data.success) throw new Error(data.error || 'Failed to send')
-    return data
+    if (!res.ok) throw new Error('Failed to send')
+    return res.json()
   }
 }
 

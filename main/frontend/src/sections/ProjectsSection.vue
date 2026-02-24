@@ -25,7 +25,7 @@ import { vReveal } from '../directives/reveal'
 
 const projects = [
   { name: 'Network Port Scanner', icon: '🔍', desc: 'Lightweight Python tool for scanning open ports on a target host. Built from scratch to understand TCP handshakes, socket programming, and how recon tools actually work under the hood.', tags: ['Python', 'Sockets', 'Networking', 'CLI'], size: 'proj-wide' },
-  { name: 'School Management System', icon: '🏫', desc: 'Full CRUD application for student records, grades, and scheduling. Database integration with a clean CLI interface.', tags: ['Python', 'SQLite'], size: 'proj-narrow' },
+  { name: 'Attendance Management System', icon: '🏫', desc: 'Full CRUD application for student records, grades, and scheduling. Database integration with a clean CLI interface.', tags: ['Python', 'SQLite'], size: 'proj-narrow' },
   { name: 'Password Strength Analyzer', icon: '🔑', desc: 'Analyzes passwords against patterns, dictionary entries, and entropy. Built to understand what makes credentials weak.', tags: ['Python', 'Security'], size: 'proj-third' },
   { name: 'OSINT Recon Helper', icon: '🕵️', desc: 'CLI tool for passive recon — pulls WHOIS, DNS records, and subdomain enumeration for a given target domain.', tags: ['Python', 'OSINT'], size: 'proj-third' },
   { name: 'IoT Environment Monitor', icon: '🌡️', desc: 'Arduino sensor system logging temperature, humidity, and motion. Thinking about the security risks of connected devices.', tags: ['Arduino', 'C++'], size: 'proj-third' }

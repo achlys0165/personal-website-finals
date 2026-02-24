@@ -26,10 +26,9 @@ import { vReveal } from '../directives/reveal'
 const certs = [
   { badge: '🎓', issuer: 'Cisco', name: 'Introduction to Cybersecurity', earned: true },
   { badge: '🛡️', issuer: 'TryHackMe', name: 'Pre-Security Learning Path', earned: true },
-  { badge: '🐍', issuer: 'Cisco / NetAcad', name: 'Python Essentials 1', earned: true },
   { badge: '🌐', issuer: 'Cisco', name: 'Networking Basics', earned: true },
   { badge: '⚔️', issuer: 'CompTIA', name: 'Security+', earned: false },
-  { badge: '📦', issuer: 'eLearnSecurity', name: 'eJPT — Junior Penetration Tester', earned: false }
+  { badge: '📦', issuer: 'AWS ', name: 'Cloud Foundations', earned: true}
 ]
 </script>
 
