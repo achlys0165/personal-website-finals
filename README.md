@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Vue.js 3, featuring a dark cybersecurity-themed design, guestbook functionality, and contact form integration.
 
-![Portfolio Screenshot](screenshot.png)
+![Portfolio Screenshot](image.png)
 
 ## 🚀 Live Demo
 - **Frontend:** [https://jan-sultan.vercel.app](https://jan-sultan.vercel.app)
